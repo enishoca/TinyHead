@@ -40,7 +40,7 @@
 
 /* $Id: RHCRC.cpp,v 1.1 2014/06/24 02:40:12 mikem Exp $ */
 
-#include "RHCRC.h"
+#include <RHCRC.h>
 
 #define lo8(x) ((x)&0xff) 
 #define hi8(x) ((x)>>8)

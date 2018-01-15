@@ -1,12 +1,12 @@
 // RH_ASK.h
 //
 // Copyright (C) 2014 Mike McCauley
-// $Id: RH_ASK.h,v 1.16 2016/07/07 00:02:53 mikem Exp $
+// $Id: RH_ASK.h,v 1.18 2017/07/25 05:26:50 mikem Exp $
 
 #ifndef RH_ASK_h
 #define RH_ASK_h
 
-#include "RHGenericDriver.h"
+#include <RHGenericDriver.h>
 
 // Maximum message length (including the headers, byte count and FCS) we are willing to support
 // This is pretty arbitrary
@@ -58,7 +58,7 @@
 #define RH_ASK_PREAMBLE_LEN 8
 
 /////////////////////////////////////////////////////////////////////
-/// \class RH_ASK RH_ASK.h "RH_ASK.h"
+/// \class RH_ASK RH_ASK.h <RH_ASK.h>
 /// \brief Driver to send and receive unaddressed, unreliable datagrams via inexpensive ASK (Amplitude Shift Keying) or 
 /// OOK (On Off Keying) RF transceivers.
 ///
@@ -191,8 +191,10 @@
 /// If you run the chip at 1MHz, you will get RK_ASK speeds 1/8th of the expected.
 ///
 /// Initialise RH_ASK for ATTiny85 like this:
+/// \code
 /// // #include <SPI.h> // comment this out, not needed
 /// RH_ASK driver(2000, 4, 3); // 200bps, TX on D3 (pin 2), RX on D4 (pin 3)
+/// \endcode
 /// then:
 /// Connect D3 (pin 2) as the output to the transmitter
 /// Connect D4 (pin 3) as the input from the receiver.

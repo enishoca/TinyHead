@@ -9,7 +9,7 @@
 #ifndef RHCRC_h
 #define RHCRC_h
 
-#include "RadioHead.h"
+#include <RadioHead.h>
 
 extern uint16_t RHcrc16_update(uint16_t crc, uint8_t a);
 extern uint16_t RHcrc_xmodem_update (uint16_t crc, uint8_t data);
